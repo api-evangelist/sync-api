@@ -8,8 +8,7 @@ type: Index
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags:
-  - API
+tags: []
 created: '2025-01-08'
 modified: '2026-03-16'
 url: >-
@@ -23,8 +22,7 @@ apis:
       forward-thinking solution, providing not only a robust bidder platform but
       also a suite of ...
     humanURL: https://sync-api.com/
-    tags:
-      - API
+    tags: []
     properties:
       - type: Documentation
         url: https://sync-api.com/
