@@ -1,0 +1,185 @@
+vocabulary:
+  provider: Sync API
+  description: >-
+    Domain vocabulary for the Sync API in-app mobile advertising platform,
+    covering programmatic bidding, user acquisition, LTV forecasting,
+    and mobile marketing terminology.
+  version: '1.0'
+  created: '2026-05-03'
+  modified: '2026-05-03'
+  tags:
+    - Advertising
+    - Mobile
+    - Programmatic
+
+  terms:
+
+    - term: Real-Time Bidding
+      definition: >-
+        Automated auction mechanism where advertisers bid on individual ad
+        impressions in real time (typically under 100ms). Each time a user
+        loads an app, a bid request is sent to demand-side platforms (DSPs)
+        that compete to serve an ad.
+      category: Advertising
+      abbreviation: RTB
+      tags:
+        - Advertising
+        - Bidding
+        - Programmatic
+
+    - term: Bidder Platform
+      definition: >-
+        Technology that participates in real-time bidding auctions on behalf
+        of advertisers. Receives bid requests from ad exchanges, evaluates
+        audience data, and submits bid responses with ad creatives.
+      category: Technology
+      tags:
+        - Advertising
+        - Bidding
+        - Platform
+
+    - term: Lifetime Value
+      definition: >-
+        Predicted net revenue a business will generate from a user over the
+        entire relationship. LTV forecasting is used to determine how much to
+        bid for a user acquisition, ensuring positive ROI.
+      category: Analytics
+      abbreviation: LTV
+      tags:
+        - Analytics
+        - Revenue
+        - User Acquisition
+
+    - term: User Acquisition
+      definition: >-
+        The process of attracting new users to a mobile application through
+        advertising campaigns. Measured by cost per install (CPI), cost per
+        action (CPA), and return on ad spend (ROAS).
+      category: Marketing
+      abbreviation: UA
+      tags:
+        - Advertising
+        - Mobile
+        - Marketing
+
+    - term: Re-Engagement
+      definition: >-
+        Advertising campaigns targeting existing users who have previously
+        installed an app but have become inactive. Re-engagement campaigns
+        use behavioral data to personalize ads and bring users back to the app.
+      category: Marketing
+      tags:
+        - Advertising
+        - Mobile
+        - Retargeting
+
+    - term: In-App Advertising
+      definition: >-
+        Digital advertisements displayed within mobile applications. Formats
+        include banner ads, interstitials, rewarded video, native ads, and
+        playables.
+      category: Advertising
+      tags:
+        - Advertising
+        - Mobile
+
+    - term: Demand-Side Platform
+      definition: >-
+        Technology that allows advertisers and agencies to buy digital
+        advertising inventory across multiple ad exchanges through a single
+        interface, using real-time bidding.
+      category: Technology
+      abbreviation: DSP
+      tags:
+        - Advertising
+        - Platform
+        - Programmatic
+
+    - term: Behavioral Analysis
+      definition: >-
+        Analysis of user in-app behavior patterns (sessions, events, purchases,
+        feature usage) to understand user intent and predict future actions.
+        Used for targeting, LTV modeling, and re-engagement segmentation.
+      category: Analytics
+      tags:
+        - Analytics
+        - Data
+        - Personalization
+
+    - term: In-App Event
+      definition: >-
+        A measurable user action within a mobile application (e.g. registration,
+        purchase, level completion). In-app events are used as conversion signals
+        for campaign optimization and LTV modeling.
+      category: Analytics
+      tags:
+        - Analytics
+        - Attribution
+        - Mobile
+
+    - term: Return on Ad Spend
+      definition: >-
+        Revenue generated for every dollar spent on advertising. Calculated as
+        revenue / ad spend. A key performance metric for evaluating campaign
+        profitability.
+      category: Analytics
+      abbreviation: ROAS
+      tags:
+        - Analytics
+        - Performance
+        - Revenue
+
+    - term: Cost Per Install
+      definition: >-
+        The average cost to acquire one app install through an advertising
+        campaign. Calculated as total spend / total installs.
+      category: Analytics
+      abbreviation: CPI
+      tags:
+        - Analytics
+        - Performance
+        - User Acquisition
+
+    - term: Attribution
+      definition: >-
+        The process of identifying which ad campaigns or channels were
+        responsible for a user install or in-app event. Mobile attribution
+        uses SDKs, fingerprinting, and SKAdNetwork to link installs to campaigns.
+      category: Analytics
+      tags:
+        - Analytics
+        - Attribution
+        - Mobile
+
+    - term: Audience Targeting
+      definition: >-
+        Selecting specific user segments to receive advertisements based on
+        demographic, behavioral, contextual, or device characteristics.
+        Sync API provides access to 1.2B+ global audiences.
+      category: Advertising
+      tags:
+        - Advertising
+        - Audiences
+        - Targeting
+
+    - term: Bid Request
+      definition: >-
+        A JSON payload sent from an ad exchange to potential bidders during
+        a real-time bidding auction. Contains information about the user,
+        device, app, and available ad placement.
+      category: Technical
+      tags:
+        - Advertising
+        - Bidding
+        - Technical
+
+    - term: Win Rate
+      definition: >-
+        The percentage of bid requests that a bidder wins in RTB auctions.
+        Optimizing bid prices to achieve target win rates while maintaining
+        acceptable CPI/ROAS is a core bidder platform function.
+      category: Analytics
+      tags:
+        - Advertising
+        - Analytics
+        - Bidding

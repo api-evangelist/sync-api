@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "syncapi": "https://sync-api.com/vocab#",
+    "iab": "https://www.iab.com/vocab#",
+
+    "AdvertisingCampaign": {
+      "@id": "syncapi:AdvertisingCampaign",
+      "@type": "@id",
+      "rdfs:subClassOf": { "@id": "schema:MarketingAction" }
+    },
+    "BidRequest": {
+      "@id": "iab:BidRequest",
+      "@type": "@id"
+    },
+    "BidResponse": {
+      "@id": "iab:BidResponse",
+      "@type": "@id"
+    },
+    "AdImpression": {
+      "@id": "syncapi:AdImpression",
+      "@type": "@id"
+    },
+    "MobileApp": {
+      "@id": "syncapi:MobileApp",
+      "@type": "@id",
+      "rdfs:subClassOf": { "@id": "schema:MobileApplication" }
+    },
+    "Audience": {
+      "@id": "syncapi:Audience",
+      "@type": "@id",
+      "rdfs:subClassOf": { "@id": "schema:Audience" }
+    },
+    "UserAcquisitionCampaign": {
+      "@id": "syncapi:UserAcquisitionCampaign",
+      "@type": "@id",
+      "rdfs:subClassOf": { "@id": "syncapi:AdvertisingCampaign" }
+    },
+    "ReEngagementCampaign": {
+      "@id": "syncapi:ReEngagementCampaign",
+      "@type": "@id",
+      "rdfs:subClassOf": { "@id": "syncapi:AdvertisingCampaign" }
+    },
+    "InAppEvent": {
+      "@id": "syncapi:InAppEvent",
+      "@type": "@id"
+    },
+
+    "campaignId": { "@id": "syncapi:campaignId", "@type": "xsd:string" },
+    "campaignName": { "@id": "syncapi:campaignName", "@type": "xsd:string" },
+    "bidPrice": { "@id": "syncapi:bidPrice", "@type": "xsd:decimal" },
+    "winRate": { "@id": "syncapi:winRate", "@type": "xsd:decimal" },
+    "lifetimeValue": { "@id": "syncapi:lifetimeValue", "@type": "xsd:decimal" },
+    "costPerInstall": { "@id": "syncapi:costPerInstall", "@type": "xsd:decimal" },
+    "returnOnAdSpend": { "@id": "syncapi:returnOnAdSpend", "@type": "xsd:decimal" },
+    "impressionCount": { "@id": "syncapi:impressionCount", "@type": "xsd:integer" },
+    "clickCount": { "@id": "syncapi:clickCount", "@type": "xsd:integer" },
+    "installCount": { "@id": "syncapi:installCount", "@type": "xsd:integer" },
+    "audienceSize": { "@id": "syncapi:audienceSize", "@type": "xsd:integer" },
+    "targetCountry": { "@id": "syncapi:targetCountry", "@type": "xsd:string" },
+    "targetOs": { "@id": "syncapi:targetOs", "@type": "xsd:string" },
+    "bundleId": { "@id": "syncapi:bundleId", "@type": "xsd:string" },
+    "eventName": { "@id": "syncapi:eventName", "@type": "xsd:string" },
+    "eventRevenue": { "@id": "syncapi:eventRevenue", "@type": "xsd:decimal" }
+  }
+}
