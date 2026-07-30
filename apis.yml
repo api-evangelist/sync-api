@@ -8,6 +8,18 @@ description: >-
   mobile advertising across 1.2 billion global audiences in 50+ countries, with
   500+ robust API integrations and advanced algorithms for LTV forecasting and
   in-app event conversion tracking.
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://sync-api.com/favicon.ico
 tags:
   - Advertising
