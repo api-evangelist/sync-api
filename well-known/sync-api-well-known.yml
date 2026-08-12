@@ -1,0 +1,106 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTP probes of every host named in apis.yml
+provider: Sync API
+providerId: sync-api
+description: >-
+  Probe record for the IETF/AI well-known discovery paths on every host named in
+  apis.yml. Every path on the one reachable host (sync-api.com) returned HTTP 404
+  from the WordPress theme's 404 template. No well-known document is served, so
+  NO WellKnown or SecurityTxt pointer is emitted in apis.yml — this file records a
+  measured absence, not a presence.
+hosts:
+  - host: sync-api.com
+    reachable: true
+    server: WordPress (Hostinger)
+    probed: '2026-08-12'
+    paths:
+      - path: /.well-known/security.txt
+        status: 404
+        content_type: text/html; charset=UTF-8
+        file: null
+        note: WordPress 404 template (HTML), not a document.
+      - path: /.well-known/openid-configuration
+        status: 404
+        content_type: text/html; charset=UTF-8
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        content_type: text/html; charset=UTF-8
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        content_type: text/html; charset=UTF-8
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        content_type: text/html; charset=UTF-8
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        content_type: text/html; charset=UTF-8
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        content_type: text/html; charset=UTF-8
+        file: null
+      - path: /.well-known/mcp.json
+        status: 404
+        content_type: text/html; charset=UTF-8
+        file: null
+  - host: api.sync-api.com
+    reachable: false
+    resolution: NXDOMAIN
+    probed: '2026-08-12'
+    note: >-
+      The baseURL carried in apis.yml until this pass, https://api.sync-api.com,
+      does not exist. Authoritative NXDOMAIN from 8.8.8.8, 1.1.1.1 and 9.9.9.9;
+      the zone (ns45/ns46.domaincontrol.com) publishes no wildcard. No path on
+      this host could be probed because the host itself is not delegated. The
+      placeholder baseURL was removed from apis.yml in this pass.
+    paths: []
+other_probes:
+  - url: https://sync-api.com/openapi.json
+    status: 404
+    note: WordPress 404 HTML, not a spec.
+  - url: https://sync-api.com/openapi.yaml
+    status: 404
+  - url: https://sync-api.com/swagger.json
+    status: 404
+  - url: https://sync-api.com/v1/openapi.json
+    status: 404
+  - url: https://sync-api.com/api-docs
+    status: 404
+  - url: https://sync-api.com/docs
+    status: 404
+  - url: https://sync-api.com/redoc
+    status: 404
+  - url: https://sync-api.com/graphql
+    status: 404
+    note: No GraphQL surface; introspection not attempted because the path 404s.
+  - url: https://sync-api.com/llms.txt
+    status: 404
+  - url: https://sync-api.com/developers
+    status: 404
+  - url: https://sync-api.com/robots.txt
+    status: 200
+    note: >-
+      Real 113-byte robots.txt. Disallows /wp-admin/ only; points at
+      https://sync-api.com/wp-sitemap.xml. No crawler is blocked from the site.
+  - url: https://sync-api.com/wp-json/
+    status: 200
+    note: >-
+      The WordPress core REST API of the marketing site. 268 routes across 31
+      namespaces, all of them CMS/plugin surfaces (wp/v2, elementor, forminator,
+      contact-form-7, litespeed, hostinger-*). This is the content-management
+      surface of a brochure site, NOT the advertising/bidder API this company
+      sells, so it is recorded here and deliberately NOT wired as an API in
+      apis.yml.
+  - url: https://sync-api.com/wp-json/mcp/mcp-adapter-default-server
+    status: 401
+    note: >-
+      A WordPress MCP-adapter route is registered (namespace "mcp", plus
+      wp-abilities/v1). Both tools/list and initialize returned 401
+      rest_forbidden. This is the stock WordPress MCP adapter plugin exposing the
+      CMS, not a Sync API product server, and it is auth-gated — so NO MCPServer
+      pointer is emitted.

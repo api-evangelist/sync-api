@@ -1,11 +1,11 @@
-generated: '2026-07-11'
+generated: '2026-08-12'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
 - host: sync-api.com
   https: true
   tls_version: TLSv1.3
-  cert_expires: Aug 23 22:26:45 2026 GMT
+  cert_expires: Oct 22 21:41:46 2026 GMT
   hsts: false
 - host: api.sync-api.com
   https: false

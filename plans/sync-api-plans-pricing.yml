@@ -4,7 +4,11 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Sync API
 providerId: sync-api
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-08-12'
+generated: '2026-08-12'
+method: searched
+source: https://sync-api.com/pricing-plans/
+docs: https://sync-api.com/pricing-plans/
 tags:
   - Advertising
   - Digital Marketing
@@ -13,144 +17,42 @@ tags:
   - Programmatic
   - Real-Time Bidding
   - User Acquisition
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
-plans:
-  - id: sync-api-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Sync API API surface. Intended for evaluation, prototyping, and
-      low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.sync-api.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://api.sync-api.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: Sync API Platform
-      - name: Sync API User Acquisition
-      - name: Sync API User Re-Engagement
-  - id: sync-api-pro
-    name: Professional
-    type: paid
-    description: Production tier for Sync API. Provides higher quotas, priority support, and access to
-      the broader API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.sync-api.com
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://api.sync-api.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.sync-api.com
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Sync API Platform
-      - name: Sync API User Acquisition
-      - name: Sync API User Re-Engagement
-  - id: sync-api-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Sync API. Includes dedicated capacity, contractual SLAs, security
-      review, data residency options, and named technical account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: configurable
-        domains:
-          - https://api.sync-api.com
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains:
-          - https://api.sync-api.com
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: Sync API Platform
-      - name: Sync API User Acquisition
-      - name: Sync API User Re-Engagement
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+description: >-
+  Measured plans and pricing record for Sync API. Sync API publishes NO API plans
+  or pricing. This file supersedes a 2026-05-04 bulk-sweep scaffold that carried
+  invented Free/Professional/Enterprise tiers with invented quotas; those values
+  were never published by the provider and have been removed.
+plan_count: 0
+plans: []
+findings:
+  - url: https://sync-api.com/pricing-plans/
+    status: 200
+    finding: >-
+      The page exists and is reachable, but it is unmodified WordPress theme demo
+      content, not Sync API's pricing. It advertises "Basic / Standart / Premium"
+      SEO-agency packages at $24.50 / $59.90 / $89.50 with feature bullets
+      ("SEO Audits", "Link Building", "Site Migration") that have nothing to do
+      with in-app advertising, and the contact block still carries the theme's
+      placeholders (email@example.com, email@yoursite.com, phone
+      "8 800 2534 236"). The page is not linked from the site navigation. It is
+      NOT a pricing disclosure and must not be read as one.
+  - url: https://sync-api.com/
+    status: 200
+    finding: >-
+      The site's only commercial call to action on every page is "Get in touch" /
+      "Contact Us". No plan names, prices, quotas, tiers, trial, or overage terms
+      appear anywhere in the four real pages (Home, About Us, Our Services,
+      Partnerships, Contact Us).
+  - url: https://api.sync-api.com
+    status: 0
+    finding: >-
+      NXDOMAIN. There is no API host, therefore no metered surface a plan could
+      price.
+notes:
+  - >-
+    Access model is relationship-based: pricing is negotiated through the contact
+    form / support@sync-api.com. Not an enterprise "contact sales" pricing page —
+    there is no pricing page at all for the advertising product.
+  - >-
+    No Plans pointer is emitted in apis.yml. A pointer asserts the provider
+    publishes plans; the measured answer here is zero.

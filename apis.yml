@@ -33,7 +33,7 @@ type: Index
 position: Consumer
 access: 3rd-Party
 created: '2026-05-03'
-modified: '2026-05-03'
+modified: '2026-08-12'
 url: https://raw.githubusercontent.com/api-evangelist/sync-api/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
@@ -47,7 +47,6 @@ apis:
       campaign management. Accessed by programmatic advertisers, DSPs, and
       mobile marketing teams.
     humanURL: https://sync-api.com/
-    baseURL: https://api.sync-api.com
     tags:
       - Advertising
       - Behavioral Analysis
@@ -71,7 +70,6 @@ apis:
       1.2B+ global audiences with LTV forecasting and in-app event
       conversion tracking across 50+ countries.
     humanURL: https://sync-api.com/
-    baseURL: https://api.sync-api.com
     tags:
       - Advertising
       - Attribution
@@ -91,7 +89,6 @@ apis:
       content for target audiences, enabling advertisers to re-engage lapsed
       users through personalized in-app advertising campaigns.
     humanURL: https://sync-api.com/
-    baseURL: https://api.sync-api.com
     tags:
       - Advertising
       - Behavioral Analysis
@@ -107,6 +104,8 @@ apis:
 common:
   - type: DomainSecurity
     url: security/sync-api-domain-security.yml
+  - type: LLMsTxt
+    url: llms/sync-api-llms.txt
   - type: Website
     url: https://sync-api.com
   - type: Contact
@@ -114,3 +113,37 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Sync API markets itself as an "Enterprise API for the In-App advertising
+    ecosystem" but ships no developer surface at all: the site is a five-page
+    WordPress brochure with no docs, no reference, no signup and no SDKs, and the
+    API host it advertised, api.sync-api.com, is authoritative NXDOMAIN on
+    8.8.8.8, 1.1.1.1 and 9.9.9.9 — so the placeholder baseURL was removed from
+    this file. Every spec and /.well-known/ path returns the WordPress 404
+    template; the only machine-readable surface on the domain is the marketing
+    site's own WordPress REST API (/wp-json/, 268 CMS routes) and an auth-gated
+    (401) WordPress MCP-adapter route, neither of which is the advertising
+    product.
+  evidence:
+    - url: https://api.sync-api.com
+      status: 0
+    - url: https://sync-api.com/openapi.json
+      status: 404
+    - url: https://sync-api.com/.well-known/agent-card.json
+      status: 404
+    - url: https://sync-api.com/docs
+      status: 404
+    - url: https://sync-api.com/wp-json/mcp/mcp-adapter-default-server
+      status: 401
+    - url: https://sync-api.com/
+      status: 200
+  checked: '2026-08-12'
