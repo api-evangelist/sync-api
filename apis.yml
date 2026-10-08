@@ -113,6 +113,12 @@ apis:
       - type: Website
         url: https://sync-api.com/
 common:
+  - type: Plans
+    url: plans/sync-api-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/sync-api-rate-limits.yml
+  - type: FinOps
+    url: finops/sync-api-finops.yml
   - type: DomainSecurity
     url: security/sync-api-domain-security.yml
   - type: LLMsTxt
