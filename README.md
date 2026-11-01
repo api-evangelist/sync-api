@@ -64,35 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Sync API is an enterprise API platform for the in-app mobile advertising ecosystem, delivering performance, transparency, and control for marketers. The platform provides a bidder platform and suite of APIs for user acquisition, mobile user growth, and user re-engagement across 1.2B+ global audiences in 50+ countries, with 500+ API integrations.
+Sync API is an enterprise API platform for the in-app mobile advertising ecosystem, delivering performance, transparency, and control for marketers. The platform provides a bidder platform and suite of APIs for user acquisition, mobile user growth, and user re-engagement. It enables data-driven, ROI-focused mobile advertising across 1.2 billion global audiences in 50+ countries, with 500+ robust API integrations and advanced algorithms for LTV forecasting and in-app event conversion tracking.
 
-## APIs
+**Areas:** Advertising · Digital Marketing · In-App Advertising · Mobile · Programmatic · Real-Time Bidding · User Acquisition
 
-| API | Description |
+## Sync API on APIs.io
+
+Everything profiled for Sync API is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/sync-api/](https://apis.io/providers/sync-api/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Sync API Platform](https://apis.io/apis/sync-api/sync-api-platform/) — The Sync API bidder platform provides enterprise-grade APIs for the in-app advertising ecosystem. The platform supports real-time bidding (RTB), user…
+- [Sync API User Acquisition](https://apis.io/apis/sync-api/sync-api-user-acquisition/) — User acquisition API leveraging advanced algorithms to optimize user acquisition strategies for mobile apps. Provides targeting across 1.2B+ global…
+- [Sync API User Re-Engagement](https://apis.io/apis/sync-api/sync-api-re-engagement/) — Re-engagement API that analyzes behavioral data to identify relevant content for target audiences, enabling advertisers to re-engage lapsed users through…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Sync Api Context](https://apis.io/jsonld/sync-api/sync-api-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Sync Api Vocabulary](https://apis.io/vocabularies/sync-api/sync-api-vocabulary/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Sync Api Domain Security](https://apis.io/security/sync-api/sync-api-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Sync Api Plans Pricing](https://apis.io/plans/sync-api/sync-api-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Sync Api Rate Limits](https://apis.io/rate-limits/sync-api/sync-api-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Sync Api Finops](https://apis.io/finops/sync-api/sync-api-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://sync-api.com)
+
+## API Evangelist rating
+
+**Kin Score 10.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| [Sync API Platform](https://sync-api.com/) | Enterprise bidder platform for in-app advertising with RTB, LTV forecasting, and conversion tracking |
-| [User Acquisition](https://sync-api.com/) | Algorithm-driven user acquisition with LTV forecasting across 50+ countries |
-| [User Re-Engagement](https://sync-api.com/) | Behavioral analysis-powered re-engagement campaigns for lapsed users |
+| Discoverability | 69.6 |
+| Contract quality | 10.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 0.0 |
 
-## Features
+**Agent readiness 2.5** — human-only
 
-- **Real-Time Bidding**: Enterprise bidder platform for in-app advertising
-- **User Acquisition**: Advanced algorithms with LTV and conversion tracking
-- **User Re-Engagement**: Behavioral analysis targeting for re-engagement
-- **Scale**: 1.2B+ global audiences, 50+ countries, 500+ API integrations
-
-## Artifacts
-
-| Type | Resource |
+| Agent-readiness dimension | Result |
 |---|---|
-| JSON-LD Context | [json-ld/sync-api-context.jsonld](json-ld/sync-api-context.jsonld) |
-| Vocabulary | [vocabulary/sync-api-vocabulary.yml](vocabulary/sync-api-vocabulary.yml) |
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-## Links
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
 
-- **Website**: https://sync-api.com
-- **Contact**: support@sync-api.com
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/sync-api/](https://apis.io/providers/sync-api/).
 
-## Maintainers
+## How this profile is made
 
-**Kin Lane** | kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Sync API: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/sync-api/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
